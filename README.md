@@ -1,1 +1,3 @@
 # EcR_transcription
+
+Source codes for the paper "The ecdysone receptor promotes or suppresses proliferation according to ligand level". The codes describe the measurement and analysis of experimental data, as well as simulations of the theory described in the supplementary materials. The scripts "fit_to_reporter_data.py" and "EcR_complex_statistics.nb" can be used to re-generate the modelling figures appearing in the paper. The data files "10ere.csv", "brk_subtr.csv" and "gbe.csv" contain experimental data from the 10ERE, Sil-10ERE and Enh-10ERE constructs used to fitting of the model and parameter estimation.
