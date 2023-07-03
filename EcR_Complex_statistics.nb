@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[    784648,      14419]
-NotebookOptionsPosition[    783887,      14400]
-NotebookOutlinePosition[    784221,      14415]
-CellTagsIndexPosition[    784178,      14412]
+NotebookDataLength[    783074,      14342]
+NotebookOptionsPosition[    782245,      14322]
+NotebookOutlinePosition[    782645,      14338]
+CellTagsIndexPosition[    782602,      14335]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -40,8 +40,8 @@ Cell["Supporting numerics for SM Section I", "Section",
 27cd046d596e"],
 
 Cell["\<\
-This is the Mathematica script used to generate Panels B and C of \
-Suppl.Fig.5.
+This is the Mathematica script used to generate Panels B and C of Suppl.Fig.5.
+
 It is used to numerically solve for the steady-state probability of any give \
 EcR being found in one of its accessible complexes. These probabilities are \
 subsequently related to the modulation of transcriptional activity at a \
@@ -50,10 +50,11 @@ derivation of the corresponding mathematical expressions can be found in SM \
 Section I.\
 \>", "Text",
  CellChangeTimes->{{3.859893704279284*^9, 3.8598937994714327`*^9}, {
-  3.879848380354534*^9, 3.879848432533923*^9}, {3.879848584031747*^9, 
-  3.879848681633782*^9}, {3.879849498899706*^9, 3.879849549247476*^9}, {
-  3.8798495917836323`*^9, 3.8798495918780193`*^9}, {3.884837140217326*^9, 
-  3.8848371540895967`*^9}},ExpressionUUID->"a33c564c-7592-4ce9-ac34-\
+   3.879848380354534*^9, 3.879848432533923*^9}, {3.879848584031747*^9, 
+   3.879848681633782*^9}, {3.879849498899706*^9, 3.879849549247476*^9}, {
+   3.8798495917836323`*^9, 3.8798495918780193`*^9}, {3.884837140217326*^9, 
+   3.8848371540895967`*^9}, 
+   3.8973807273326283`*^9},ExpressionUUID->"a33c564c-7592-4ce9-ac34-\
 e841e72551eb"],
 
 Cell[BoxData[
@@ -62,8 +63,8 @@ Cell[BoxData[
    RowBox[{"First", ",", " ", 
     RowBox[{"use", " ", 
      RowBox[{"Eqs", ".", 
-      RowBox[{"(", "10", ")"}]}], " ", "and", " ", 
-     RowBox[{"(", "15", ")"}], " ", "to", " ", "write"}]}], "*)"}], 
+      RowBox[{"(", "S13", ")"}]}], " ", "and", " ", 
+     RowBox[{"(", "S18", ")"}], " ", "to", " ", "write"}]}], "*)"}], 
   "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
@@ -102,11 +103,11 @@ Cell[BoxData[
     RowBox[{"Then", ",", " ", 
      RowBox[{"using", " ", 
       RowBox[{"(", 
-       RowBox[{"11", "-", "13"}], ")"}]}], ",", " ", 
+       RowBox[{"S14", "-", "S16"}], ")"}]}], ",", " ", 
      RowBox[{
       RowBox[{"write", " ", 
        RowBox[{"Eq", ".", 
-        RowBox[{"(", "17", ")"}]}], "in", " ", "such", " ", "a", " ", "way", 
+        RowBox[{"(", "S17", ")"}]}], "in", " ", "such", " ", "a", " ", "way", 
        " ", "that", " ", "it", " ", "only", " ", "depends", " ", "on", " ", 
        "total", " ", "concentrations", " ", "and", " ", "affinities", 
        "\[IndentingNewLine]", "which", " ", "are", " ", "here", " ", "taken", 
@@ -116,7 +117,7 @@ Cell[BoxData[
        "-", " ", 
       RowBox[{"equivalent", " ", "to", " ", 
        RowBox[{"Eq", ".", 
-        RowBox[{"(", "17", ")"}]}]}], "-", " ", 
+        RowBox[{"(", "S17", ")"}]}]}], "-", " ", 
       RowBox[{
       "will", " ", "be", " ", "solved", " ", "numerically", " ", "for", " ", 
        "all", " ", "parameter", " ", "choices", " ", "of", " ", 
@@ -373,18 +374,14 @@ Cell[BoxData[
        RowBox[{"Atot", "->", "pAtot"}], ",", 
        RowBox[{"Rtot", "->", "pRtot"}], ",", 
        RowBox[{"Ectot", "->", "pEctot"}]}], "}"}]}]}]}]}]], "Input",
- CellChangeTimes->{{3.859893332747168*^9, 3.859893526242894*^9}, {
-  3.859893563854425*^9, 3.859893579744361*^9}, {3.859893628888392*^9, 
-  3.859893676033678*^9}, {3.8598938084986763`*^9, 3.859893871346232*^9}, {
-  3.859893965084203*^9, 3.859893970680052*^9}, {3.859896065646929*^9, 
-  3.8598960844157753`*^9}, {3.879848210091655*^9, 3.879848231867806*^9}, {
-  3.879848452247671*^9, 3.8798484620457687`*^9}, {3.8798485036873703`*^9, 
-  3.879848545496859*^9}, {3.879848740474806*^9, 3.879848796336093*^9}, {
-  3.879848859474401*^9, 3.8798489727368307`*^9}, {3.879849560089507*^9, 
-  3.879849560956973*^9}, {3.88044803404904*^9, 3.880448088853891*^9}, {
-  3.880448352568008*^9, 3.880448353054031*^9}, {3.880449854280604*^9, 
-  3.880449880261566*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"6d98fc25-707c-4b83-91dc-2be92d3b0c27"],
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBmIQffbF9C7NQ28cTx09vghEF4dXLwfR5y6WrwTRW3Pn
+rAfRT4Qbt4Joja/8x0B0qMjrs2B9GxfdBNF/DoXeAtFLNps80ALSHH69j0D0
+tXdOSpYv3jgKHv2tAqLfvGl3ANEfyg46gul/X91AtOszfR8QPcewPwVEux3s
+ygbR3nr5xSBabsr0RhBtd5fpNIhumy8HpvdMdGSJe/nGUThYmhtEy+sK6YDo
++bsUwfTWXyeeg+gDcRyvQfSKf5MPreR865jP+ABMP2GuPwWi5yy5cRpMf1xw
+HkTX3mm+AKL5lqU/AtGX5rwC0wDBEqkC
+  "],ExpressionUUID->"6d98fc25-707c-4b83-91dc-2be92d3b0c27"],
 
 Cell["\<\
 The expressions written above are now used to calculate the probability of \
@@ -1743,8 +1740,7 @@ KhwSLgIXwE14DE9+3/v+33z51fry1kBEVGmlImaHIwoMUufGbluLlEjRILFv
 apk50v+33NonOj4UMUE7HfFk3rfPmQ903rxAhSUWObQfzURkGeHLPKa/7Hmf
 9p8f39/2z/6z5nudTTaYtOu5u6PLkft7ndFd72Vtakl3dMp933vH/GI+1Vet
 aEdX9FireqKf+uD+TN/MH7xTM1/pNedccsEjPW9/K00qjA==
-                 "]]}, 
-               "0.7919999999999999`"], 
+                 "]]}, "0.7919999999999999`"], 
               Annotation[#, 0.7919999999999999, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
@@ -1759,8 +1755,7 @@ aTIEazTsrcsJJklwRFP/WPb0R1T6Ik6cqzKp7qVsPq03wxQv6oas2zmVNTlk
 b0w21fvyw/d88sWwWdWdH+dvyna2eNVrm83pzbPIAiN6Z+bn3KjvuCXluRsy
 LQuyRJGO+sLuJW31A/dk9atyl20q7PCsn/KON/lOxjnNr+/pmD+yp65RJ8sh
 B7TMlty57r67+69kQba4cv8fZo82VQ==
-                 "]]}, "0.704`"], 
-              Annotation[#, 0.704, "Tooltip"]& ], 
+                 "]]}, "0.704`"], Annotation[#, 0.704, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -1775,8 +1770,7 @@ Ztg8Qj5Tdn2yl3PPnvGoy3N+kBeezzFnc2rusO+knS5iVOiP5QlHbKSGsE6y
 O32yn17KPTcgi+SanJArclyuyl/5RyGt7t55133036J7fsut+VB/wD5Xuky7
 PXczZK281FXJGqqJURZ9m2JKKaGDN3cW5aiMyzH5ygsx71nmJ/o+Bfb5tOsW
 +dJ9kq3LokU3z4funXRdGm38AztrRB4=
-                 "]]}, "0.616`"], 
-              Annotation[#, 0.616, "Tooltip"]& ], 
+                 "]]}, "0.616`"], Annotation[#, 0.616, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -1791,8 +1785,7 @@ yVuZtCuxa7UrlW3yTh/Xn3PBk25W92v/6vzCgL7WHGRS7nneqjyzW5Nx2SB7
 ZC9dROnmQp/nvkt5RZFzIY/eMZr6Rt2YeZwJbswJOpg0t8t5193LmtR38OD8
 6f5I6v+QG/abLJgXWeLZNStymVfnPt7Zdd2b7NTHZLeMMuN8YjctT2Wu35jD
 FlO6bXmoP+aIpPd+6Pc5YMf8D6+QPwo=
-                 "]]}, "0.528`"], 
-              Annotation[#, 0.528, "Tooltip"]& ], 
+                 "]]}, "0.528`"], Annotation[#, 0.528, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -1807,8 +1800,7 @@ XD7IUnkX7e5MMGKvt0+av925Ng/qVmUVxeZnfb4s4FR3Qq75WPa410ufvcR+
 xGHU22N00+K8mVvfk22/kfvR+5sz2DXXOK+lmmJ7nSyUf7T7TBuj5j39hfsH
 9nOZYi+njG3nO+TQ6vxeN+AzCXu/XGNHn+CXH3p1K2yZN/niM3p23RIb5nVe
 eaFLt8CyeZHH6H+lQzdH3DzLbfSeFHmGLL//DwipSGY=
-                 "]]}, 
-               "0.43999999999999995`"], 
+                 "]]}, "0.43999999999999995`"], 
               Annotation[#, 0.43999999999999995`, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
@@ -1824,7 +1816,6 @@ yikOuNTHo/eit3CvG9BtOR9HGbr0pdxgbZvT5PTojDlhb6Y5yU3Wm9Et96A3
 +rz2HKAKfXIld9hzxAXyKZ+h2FyER/dcyLW4Qh1i+hd9OS/IFbzIQzyhT5hH
 zMO4MbfiDuPeSUV36dv4CfXmOvw518BLukZe4Sme0c/yaE4IY1h0xzhPYBJL
 8h4v8yG3Rv8Ft0TfleP6NXe8uy+p++BvfEW/G0qsx3BtLdf+fxkjShw=
-                 
                  "]]}, "0.352`"], Annotation[#, 0.352, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
@@ -1840,8 +1831,7 @@ q1JfomeZXcjN8oj8a1ah/1avuTK5NLqTnEQtevUfdj+js/pBu+s440/xIMfM
 XjFrPoM8/pZv4BpRj3K+x70P1MPoXYjbezZ7wb6+35lH+YQ/xhGSXA1XaF6t
 Fqhp6jm/Z54qp6ASO2a7yEer2Q3XbW9b36UuYIvfjP5d9N3o5OawIifwjje0
 c9NYlOeje+IJcW4ymslTuMcdSrzrH7rJRq4=
-                 "]]}, "0.264`"], 
-              Annotation[#, 0.264, "Tooltip"]& ], 
+                 "]]}, "0.264`"], Annotation[#, 0.264, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -1856,8 +1846,7 @@ y7yKFQzIs/Y/zV94kee8n8C1/grf5gpn77iUL3COrH4kehvjcou7heZn/amc
 iX6n3IseFOtK0GxviN9003YO5Slewon+GHfm/OgtdKDBTiff6I+c55ljaMev
 szau5Fau4hSSGLP/qEu7k0ISZ7o/ftBv8xY2o+/qf/hen+A1rOBA36Qr914j
 l/Grfl+/yHuc5VJ9Jvrv5YXoe/zEt+78A5HWRM0=
-                 "]]}, "0.176`"], 
-              Annotation[#, 0.176, "Tooltip"]& ], 
+                 "]]}, "0.176`"], Annotation[#, 0.176, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -2843,8 +2832,7 @@ PQpNymQwOINKmiBxfcOV+33vJ9/7Pbn9o2o9iYgd8gsRtfmI59mIn7mIJznU
 Hepyss2fbiCzvOsTHnUH8o0xdfeM+QrL/Lq35EAump9ywgdNrsjSpsUnHa5Z
 pcsNX9x6545J+o0dv+WSfGFbf0/euSenZkU2KFHQJ/o1OSNH9unpH+hznO5p
 dmZ2nv5H96q71F1Q0W2xri+z59ww35Wb/AOSpCqO
-                 "]]}, 
-               "0.8009999999999999`"], 
+                 "]]}, "0.8009999999999999`"], 
               Annotation[#, 0.8009999999999999, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
@@ -2858,8 +2846,7 @@ hwShJSq3oFIM/STlkC39HC6uc59zP/eTPKwVqlMRkcdoOuJxLmIHJ3KOu7MR
 45mIMu/jE8e2bduH/GsrcRFvOLLtYsk+sP3I7/omf/Ef9ydv8rU7Fd7Dsnyq
 b8vzvIAE1vVX/KRf4SRWkdXfcEe/xqnJXWzqt3Dh39/Ol7yIPFp4wCs6uHcv
 zcEZfsEzzr1Z0DV8P5TrPOCSrYhb555zljdwJt/xge0fSTMrSQ==
-                 "]]}, 
-               "0.712`"], Annotation[#, 0.712, "Tooltip"]& ], 
+                 "]]}, "0.712`"], Annotation[#, 0.712, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -2887,8 +2874,7 @@ U6fGUGvEnqywy4h1Tg7LQfcy+oD8st7Re/VvvUd+0tAbMk+VY+7861DeygO5
 xj4VVlilnWXe+aBMzvkl+nyzmw3WmbWX0KG3USZhxt4CWXf/5KN85Y15Lp25
 4oIbrhm1X5N1nvRnJt0tylL6Nv1ednprF0XrI2fHmeAnfWP6HbOSWVWfYppf
 sxOZNZszG5P/A1g4PQ==
-                 "]]}, "0.534`"], 
-              Annotation[#, 0.534, "Tooltip"]& ], 
+                 "]]}, "0.534`"], Annotation[#, 0.534, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -2931,8 +2917,7 @@ lSP3NR3XFT3Uoh7oso7pjdb1PBXx2RKx7zzqfMoJC+6ddjp49F5zPzM/1mt9
 0yvd875LwX2KrNk0X775Zsmsx3s3efMdvTD79fZHmPWbFfXWPKVp2hk0H2LL
 eZte+ijbm2n8i+/n9EkT2qhS4cVelz5Td67xYPfSPUuOV+Yb/6MfvPNjL6N3
 jDjndZh7Nu3+A+knMtI=
-                 "]]}, "0.267`"], 
-              Annotation[#, 0.267, "Tooltip"]& ], 
+                 "]]}, "0.267`"], Annotation[#, 0.267, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -2946,8 +2931,7 @@ UUajU1y5QRz+BXl9h1fvz+f7u9/3fu0zK2PLdSGEAv2JEPKNIexpVnc1p32a
 Or8xv2uXvZsm+6NWnV02hHCia85O43/aP+M7uuHswrypw/ZRRji2l/SODHly
 PLHAIvUUWKLMn3u2tKQt8V2taMJ3tGmHOwvme+dnes4Qq/Zx1s0TmvK7qrmZ
 D+89xHvNndRIkfSbVv3x/JcvvqnF7yDt2T8y4jqy
-                 "]]}, "0.178`"], 
-              Annotation[#, 0.178, "Tooltip"]& ], 
+                 "]]}, "0.178`"], Annotation[#, 0.178, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -3524,7 +3508,6 @@ S93JE/wJwbOiflfC9y14tjQzV+CmY/NS90i9Gg3+gP8Ra2XtjdF3I81cCH6D
 o9Qr1dhC/srgt0IaOhq9h/b6PwPkXsj8rfrTrbcmWtvS5An8rsyzpT1O4Q/I
 rCWdQWe5lnl2td71zGfUWfWmDcIvLfjt1kyVFKwZaUcz+Sjzmye9qqcdcDOi
 e6M37nDwHemuNPN9tXZmbegfon/J0+BeSGPSWgCPy/vNHUb+P0dsuE4=
-                 
                  "]]}]}, {
               EdgeForm[], 
               RGBColor[0.717571875, 0.1749009375, 0.1764215625], 
@@ -3848,7 +3831,6 @@ Rlvl/Jvbe8b7C21B7wrvB2zWIr6TvR30H+qnMmKEVodjvN3Cd/XNBXqD8x0B
 ZnCQjOo+vHJ3gn6BdwCfaBs1Z9PMOdqM3g5aGyrqeXKtjMq6l5xNGS7xPyRn
 O0Jf49wvne2Gefto9cL1LXSSUX0Kz3gH0MicuYu2RZ7r3P9M/64JlXah94g+
 xN/M3Dvk/FZ6N/WktQvvph20y0vpWZqhWcv/rJqhWX9unC+n
-                 
                  "]]}]}}, {{}, 
              TagBox[
               TooltipBox[{
@@ -3908,8 +3890,7 @@ W4VBt+Ao0hJegHvPPzy83zl+349b571mdykiGtyvRBSzEbsUOMtEdFcjTu3/
 9E7bdid0zG3zTG/1yC6hlf5uTuwTneiD3a9zizAfp+/YcJ6mbzlw50ZzdjXn
 KgtzWSuU2GePS/u+vuma+6/6pXVt6icfbLsz1BGHvDMgb/+sL1R54pFN+x/f
 mNNjyAXfjNP/vByR1YK7O1xzxbp3/724KAo=
-                 "]]}, "0.525`"], 
-              Annotation[#, 0.525, "Tooltip"]& ], 
+                 "]]}, "0.525`"], Annotation[#, 0.525, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -3922,7 +3903,6 @@ QxmhtvQGNYQRSEtENBS+QJ/Dx3/Ofy7cbOWwcDASERvsjUbUxyJycmaYzNJI
 Rjzp5vjmlhan+mv3vHleLrLEmf5GLuiX5QqrnOt/EhFtc4d1iox796t/lQN5
 6V1af2zPm4/kHydk9PXhf/qSfOfKPK1vmtfMZZmyd+UjFxT1z7oXdinZ75hw
 25Q93RtVyvZ7Mm5bsq/7oMa2/YFJtx35qftin4q9w5RbW/4DGE4s5Q==
-                 
                  "]]}, "0.44999999999999996`"], 
               Annotation[#, 0.44999999999999996`, "Tooltip"]& ], 
              TagBox[
@@ -3966,8 +3946,7 @@ uB0ZXSs/oQ3buhZuRlpX4Ec0YUvXyHmkdBl+QBYbunQyzyUfjPjAJ65QNSvk
 7eJdXpN7eERedV63W8cXluUL3RKXsYJT+YAPsY9buWj3l/9wjG67Nd0l3uSf
 jLfyvPkcZpzruhfnc76X7/CNSbzixHxa3899mDCbksf5hjf5mks8xqNc4wqf
 8XDyJh5K/onLvMeD3MsDvMtH7v4H094sAQ==
-                 "]]}, 
-               "0.22499999999999998`"], 
+                 "]]}, "0.22499999999999998`"], 
               Annotation[#, 0.22499999999999998`, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
@@ -3982,8 +3961,7 @@ Qjgxn2IcebTIv+R18wVmMIt2+bf8znyPOcyjU/4jf+VfPveuDnnR/o43hOYQ
 RuVjeNK94BnT9iP9h3mRV3iJj+UPnLXn0Igz+7q8npzjNawilfyP+4cwgBEM
 49K5DF9zK1/xn7MbXOBdzxZwk3wfb3Ix+W7zHm7tJY6QTjJdmfPu6tVVzBm0
 oaSr8oSuT1czd6EbZd0+T+r6dQfmHmRR0R3ylC7WPZr/AT3LLVs=
-                 "]]}, 
-               "0.15`"], Annotation[#, 0.15, "Tooltip"]& ], 
+                 "]]}, "0.15`"], Annotation[#, 0.15, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -5203,7 +5181,6 @@ AptVb/gXeJ83borDVejfArvrEWLeMF++N+5pvg3eOCQu6Q3oLVzBdjlpd9IY
 bfRriuzuVyOtgf0R2rc4UuttZs0uzj+NjEPikjgsLgfUexG3N6i3uM1bL/1x
 +uv05vX29SeURdZDvTSDZhEnxA3VCNF/hnbWS/hdZGfS2fRGSsT/yLipHWlX
 ejPKf41/C3izN6w/Tn+dOCVuaScVkXFEXBFHF5L2JvU2xemX4P/H06OV
-                 
                  "]]}]}, {
               EdgeForm[], 
               RGBColor[
@@ -5251,8 +5228,7 @@ WIVFuL6Da+7vud9v3vcpPDz1Hhci4oq3VEQ+G7FMjhUKdCmxSpF11uhRoUqZ
 Gptcs02TBrvscMM+B+xxSIs+x5xwxCltbkkvRozt9ez7PR3xx695lon44ZuR
 Luu/DB/OLpP3dOfJDvJCTvSdZC/zWbKXvJdf8k5OZdVdFV7ds2UeLkV8yrJu
 gxd93TzQz83/H2gdpA==
-                 "]]}, "0.3`"], 
-              Annotation[#, 0.3, "Tooltip"]& ], 
+                 "]]}, "0.3`"], Annotation[#, 0.3, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -5266,8 +5242,7 @@ GutcCW/cGUa4UZS5KtrcOca4cexx+/jkLvCdiriUd/6a5Fv6LzrY6IvI8AMo
 2k2whE1+iBvGir6GVWT1fjcyuLE/oV/Lsvkvf1zhlXvBLV/hEzlo/oPb/b+v
 78hFmecKqJmr4onL6UfeC/LUXpHbNv8o57k5HPMFvc4/yFluBk0+r2/x93Ka
 m0KDz+k1/l3/A+Z6LGQ=
-                 "]]}, "0.27`"], 
-              Annotation[#, 0.27, "Tooltip"]& ], 
+                 "]]}, "0.27`"], Annotation[#, 0.27, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -5281,8 +5256,7 @@ GrHKI/a5Pspr9pu+zmN2VR/nDftd3+SsfanneMv+0Es8YW/zJO9wXa8lIvb9
 rqCMQxzgQe9yR74tYg6zePbcPF/rV1jyv0Xc+e8njrUjTGtTuNHqqGjlxnc1
 vhFP3vuIPW0XJfS5e9DdA85rzr7tL/Q76+Ef3OtFewXLyGhJ7YITXOVuz3fy
 jPMOzthnnOZ2zuppTtkn/GcnGu/mZv7lW3f9A4NfM4g=
-                 "]]}, "0.24`"], 
-              Annotation[#, 0.24, "Tooltip"]& ], 
+                 "]]}, "0.24`"], Annotation[#, 0.24, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -5297,8 +5271,7 @@ yPXaQ34Ij1yfeU2/jmOu3x7hnrgBcwwbXCw7hBM+bk/yq1jBhX5YpuUgF5cN
 shH1zl/JDG58b8e+hVHfG8GpLs29uPOMaq5OluuOZJk8lL3OVsskXyWj9iKu
 EC3mVixyzbIJBfoP5z6xg3fU8LV4Nae8e41x+xgq3anAri6DhG4IJbpibOsu
 Efv/P8jX5WFTd47W/7fxjjdEvP8HpGRBfA==
-                 "]]}, "0.21`"], 
-              Annotation[#, 0.21, "Tooltip"]& ], 
+                 "]]}, "0.21`"], Annotation[#, 0.21, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -5313,8 +5286,7 @@ og/jHn/RD3CEJ/RRPOSv+psVacV2o9fjnXaRHMK7DWV4x9q1TuuwNvfy3bvC
 ce804hpvwDF+jtm8FmvcP8M6fu186s2I8zHe2azzjFW50+y/l+58On9YhV72
 /5a2iY1+38AfK7Hy/+/GL1u1ar8X4ISeh5V8CYsxF6N6DhbyeczCbGzVI5jJ
 4/jL07AJU/AbE77hD78ZPgw=
-                 "]]}, "0.18`"], 
-              Annotation[#, 0.18, "Tooltip"]& ], 
+                 "]]}, "0.18`"], Annotation[#, 0.18, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -5330,8 +5302,7 @@ LjlF96Drtkf5ZRzreuRU3aOu1/6bj+FE1ydHdE+6fvsffgVnugE5TfesG7Sv
 rzFPzRwuGzvu/sMLVy6X4ZO9OP5/zGp5xfzqWeXmpPzF3oD8+LuUS7Cku0cU
 b/iPmN/9i3H9GKrcqcQvbtfdH9woRlDgfKlum++Ru+PfA7n8R36Lb5ab0Igs
 PpPf4D/L9ahDhH81p8x3IpRHNw==
-                 "]]}, "0.15`"], 
-              Annotation[#, 0.15, "Tooltip"]& ], 
+                 "]]}, "0.15`"], Annotation[#, 0.15, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -5364,8 +5335,7 @@ i/gdrOHdQ/wNf003bA/0Pt7Pn9omqe79E/6YLmPH9B5+ibrlpvtZ3kmz7m/T
 M3mSzmEnvXvFz+sz/Lo7XfyR3itfo+PeJPVcfJ/OyNPeHOIJemd7G//vcoHy
 FOFn/XbOPhp/s/ib0gn7KXvDflqf0lNyjt/SszzCX/BOfpT32jM8oz/nSZ7m
 V+wd/IDX3fgPsQdWFg==
-                 "]]}, "0.09`"], 
-              Annotation[#, 0.09, "Tooltip"]& ], 
+                 "]]}, "0.09`"], Annotation[#, 0.09, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -5381,8 +5351,7 @@ Le70+P2b486a0YQ39pLzZaTwR0u6166n7VX8wqGe1t9WhPDe2aa2hW3knR07
 G9IzhbvI4la/wV+9z7tJ/shH3M85XnA+j0v3J+xr38nynDaLCz1hX+mH/EP7
 jrw+bv/XMzyjTeNcH7Mv9QP+pn3FmT5qX+j7nNSmcKqP2Hl9jye1CZzow/a5
 vssJbbzwP/Uv9pm+w2PaKI70z/ap/o9HtGHk9E/2iX5nPwLBtVq0
-                 "]]}, 
-               "0.06`"], Annotation[#, 0.06, "Tooltip"]& ], 
+                 "]]}, "0.06`"], Annotation[#, 0.06, "Tooltip"]& ], 
              TagBox[
               TooltipBox[{
                 Directive[
@@ -6174,7 +6143,6 @@ reZebYp/C2T2Z24bgT2c573vZoHD4PEZ2w/+z7u3occ5YV+xTs0kd5BFf33Y
 fv/Cv0OX2j/46VfHxhf+fYo/drrOUueJS97X6t9NxM2g44Xe4MMs7v2H/V6n
 z9nkPGeP+/CBL/unfWaxcwYf1ruPBDe+LAIDwcJO43BbNc6U7N8z1r3fPvnb
 fImZo66DYEC/cWDI57nH/xDNrkkfWf9L86h7Nft6yHFPDP8LrbfnJg==
-                  
                   "]], 
                  PolygonBox[CompressedData["
 1:eJwtkz1IVnEUxs99vfe+/5uWkEpEGdSSgzm02eQQREMRElnQ9PZBOPi2BNFm
@@ -6327,7 +6295,6 @@ Hs3yDeU81551mj3ZbynNFfhPEe8s6zFMsy65F9WjHfCXwJlZsaaXSjvJ/w39
 3O/n7D3aq5pujZ45mj36xt3R36hvlSYq+Mvq3bvq6SnE52fPUtXsefw3C89+
 zaChbI0ovzS6g9jw6G/VnXX3b8p5rBm9jfix5F7Qnb/F3508qzSjdml+RmtL
 etMsbsq+u+pVF91D2i/9DxLvSp5t6slt+I9ka097pOX/AaG99Xo=
-                  
                   "]]}]}, {
                EdgeForm[], 
                RGBColor[0.761238524, 0.191979564, 0.193987208], 
@@ -6745,7 +6712,6 @@ g+Ppsg7xeM04z3eNWKsVURzrH8ekoZ5lfi3Pk74s25u4v+ZZNQFv/llqXj+X
 pdvpWhPLwnguzuLZM1k9MeR+31QKnxbOu6PqQI4MRP0/OAh5MGmO70jSoz5x
 Za8RN/KPfKLtfUmcIDd6POea/rb2mDMvZNWH3yPmENzT5Mf2qHl3yN+9c67j
 DscwjP2vUt/apVkzkrmwF4Y8PynzW/Sxv023zMXl0L/jOczv6n97nxPa
-                  
                   "]], 
                  PolygonBox[CompressedData["
 1:eJwllElsjVEUx0/b733vfhvDQlsLY8RCJIaykAabqmqNHa1Uaw7RFEmFxND2
@@ -6826,8 +6792,7 @@ KhwSLgIXwE14DE9+3/v+33z51fry1kBEVGmlImaHIwoMUufGbluLlEjRILFv
 apk50v+33NonOj4UMUE7HfFk3rfPmQ903rxAhSUWObQfzURkGeHLPKa/7Hmf
 9p8f39/2z/6z5nudTTaYtOu5u6PLkft7ndFd72Vtakl3dMp933vH/GI+1Vet
 aEdX9FireqKf+uD+TN/MH7xTM1/pNedccsEjPW9/K00qjA==
-                  "]]}, 
-                "0.7919999999999999`"], 
+                  "]]}, "0.7919999999999999`"], 
                Annotation[#, 0.7919999999999999, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
@@ -6842,8 +6807,7 @@ aTIEazTsrcsJJklwRFP/WPb0R1T6Ik6cqzKp7qVsPq03wxQv6oas2zmVNTlk
 b0w21fvyw/d88sWwWdWdH+dvyna2eNVrm83pzbPIAiN6Z+bn3KjvuCXluRsy
 LQuyRJGO+sLuJW31A/dk9atyl20q7PCsn/KON/lOxjnNr+/pmD+yp65RJ8sh
 B7TMlty57r67+69kQba4cv8fZo82VQ==
-                  "]]}, "0.704`"], 
-               Annotation[#, 0.704, "Tooltip"]& ], 
+                  "]]}, "0.704`"], Annotation[#, 0.704, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -6858,8 +6822,7 @@ Ztg8Qj5Tdn2yl3PPnvGoy3N+kBeezzFnc2rusO+knS5iVOiP5QlHbKSGsE6y
 O32yn17KPTcgi+SanJArclyuyl/5RyGt7t55133036J7fsut+VB/wD5Xuky7
 PXczZK281FXJGqqJURZ9m2JKKaGDN3cW5aiMyzH5ygsx71nmJ/o+Bfb5tOsW
 +dJ9kq3LokU3z4funXRdGm38AztrRB4=
-                  "]]}, "0.616`"], 
-               Annotation[#, 0.616, "Tooltip"]& ], 
+                  "]]}, "0.616`"], Annotation[#, 0.616, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -6874,8 +6837,7 @@ yVuZtCuxa7UrlW3yTh/Xn3PBk25W92v/6vzCgL7WHGRS7nneqjyzW5Nx2SB7
 ZC9dROnmQp/nvkt5RZFzIY/eMZr6Rt2YeZwJbswJOpg0t8t5193LmtR38OD8
 6f5I6v+QG/abLJgXWeLZNStymVfnPt7Zdd2b7NTHZLeMMuN8YjctT2Wu35jD
 FlO6bXmoP+aIpPd+6Pc5YMf8D6+QPwo=
-                  "]]}, "0.528`"], 
-               Annotation[#, 0.528, "Tooltip"]& ], 
+                  "]]}, "0.528`"], Annotation[#, 0.528, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -6890,8 +6852,7 @@ XD7IUnkX7e5MMGKvt0+av925Ng/qVmUVxeZnfb4s4FR3Qq75WPa410ufvcR+
 xGHU22N00+K8mVvfk22/kfvR+5sz2DXXOK+lmmJ7nSyUf7T7TBuj5j39hfsH
 9nOZYi+njG3nO+TQ6vxeN+AzCXu/XGNHn+CXH3p1K2yZN/niM3p23RIb5nVe
 eaFLt8CyeZHH6H+lQzdH3DzLbfSeFHmGLL//DwipSGY=
-                  "]]}, 
-                "0.43999999999999995`"], 
+                  "]]}, "0.43999999999999995`"], 
                Annotation[#, 0.43999999999999995`, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
@@ -6907,7 +6868,6 @@ yikOuNTHo/eit3CvG9BtOR9HGbr0pdxgbZvT5PTojDlhb6Y5yU3Wm9Et96A3
 +rz2HKAKfXIld9hzxAXyKZ+h2FyER/dcyLW4Qh1i+hd9OS/IFbzIQzyhT5hH
 zMO4MbfiDuPeSUV36dv4CfXmOvw518BLukZe4Sme0c/yaE4IY1h0xzhPYBJL
 8h4v8yG3Rv8Ft0TfleP6NXe8uy+p++BvfEW/G0qsx3BtLdf+fxkjShw=
-                  
                   "]]}, "0.352`"], Annotation[#, 0.352, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
@@ -6923,8 +6883,7 @@ q1JfomeZXcjN8oj8a1ah/1avuTK5NLqTnEQtevUfdj+js/pBu+s440/xIMfM
 XjFrPoM8/pZv4BpRj3K+x70P1MPoXYjbezZ7wb6+35lH+YQ/xhGSXA1XaF6t
 Fqhp6jm/Z54qp6ASO2a7yEer2Q3XbW9b36UuYIvfjP5d9N3o5OawIifwjje0
 c9NYlOeje+IJcW4ymslTuMcdSrzrH7rJRq4=
-                  "]]}, "0.264`"], 
-               Annotation[#, 0.264, "Tooltip"]& ], 
+                  "]]}, "0.264`"], Annotation[#, 0.264, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -6939,8 +6898,7 @@ y7yKFQzIs/Y/zV94kee8n8C1/grf5gpn77iUL3COrH4kehvjcou7heZn/amc
 iX6n3IseFOtK0GxviN9003YO5Slewon+GHfm/OgtdKDBTiff6I+c55ljaMev
 szau5Fau4hSSGLP/qEu7k0ISZ7o/ftBv8xY2o+/qf/hen+A1rOBA36Qr914j
 l/Grfl+/yHuc5VJ9Jvrv5YXoe/zEt+78A5HWRM0=
-                  "]]}, "0.176`"], 
-               Annotation[#, 0.176, "Tooltip"]& ], 
+                  "]]}, "0.176`"], Annotation[#, 0.176, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -7928,8 +7886,7 @@ PQpNymQwOINKmiBxfcOV+33vJ9/7Pbn9o2o9iYgd8gsRtfmI59mIn7mIJznU
 Hepyss2fbiCzvOsTHnUH8o0xdfeM+QrL/Lq35EAump9ywgdNrsjSpsUnHa5Z
 pcsNX9x6545J+o0dv+WSfGFbf0/euSenZkU2KFHQJ/o1OSNH9unpH+hznO5p
 dmZ2nv5H96q71F1Q0W2xri+z59ww35Wb/AOSpCqO
-                  "]]}, 
-                "0.8009999999999999`"], 
+                  "]]}, "0.8009999999999999`"], 
                Annotation[#, 0.8009999999999999, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
@@ -7943,8 +7900,7 @@ hwShJSq3oFIM/STlkC39HC6uc59zP/eTPKwVqlMRkcdoOuJxLmIHJ3KOu7MR
 45mIMu/jE8e2bduH/GsrcRFvOLLtYsk+sP3I7/omf/Ef9ydv8rU7Fd7Dsnyq
 b8vzvIAE1vVX/KRf4SRWkdXfcEe/xqnJXWzqt3Dh39/Ol7yIPFp4wCs6uHcv
 zcEZfsEzzr1Z0DV8P5TrPOCSrYhb555zljdwJt/xge0fSTMrSQ==
-                  "]]}, 
-                "0.712`"], Annotation[#, 0.712, "Tooltip"]& ], 
+                  "]]}, "0.712`"], Annotation[#, 0.712, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -7972,8 +7928,7 @@ U6fGUGvEnqywy4h1Tg7LQfcy+oD8st7Re/VvvUd+0tAbMk+VY+7861DeygO5
 xj4VVlilnWXe+aBMzvkl+nyzmw3WmbWX0KG3USZhxt4CWXf/5KN85Y15Lp25
 4oIbrhm1X5N1nvRnJt0tylL6Nv1ednprF0XrI2fHmeAnfWP6HbOSWVWfYppf
 sxOZNZszG5P/A1g4PQ==
-                  "]]}, "0.534`"], 
-               Annotation[#, 0.534, "Tooltip"]& ], 
+                  "]]}, "0.534`"], Annotation[#, 0.534, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -8002,8 +7957,7 @@ M9/qiHmYP4bMN1yzzSkFqvSzwTvrvPHKLEcc8uDOfb3XVHPZO+5tscMAW2zy
 wgqr5ElZ4pkmSfabfL6hde6Yo8aP/YHvuPL8pY/m3nxEH4l5Vz/1wnlbL3VP
 v71X8lxyPq7TdhWdoMwUk8zYN7P/7/mMEz7sinZ1PTaPUaRjd64VdzaclfUf
 vO8yzw==
-                  "]]}, "0.356`"], 
-               Annotation[#, 0.356, "Tooltip"]& ], 
+                  "]]}, "0.356`"], Annotation[#, 0.356, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -8017,8 +7971,7 @@ lSP3NR3XFT3Uoh7oso7pjdb1PBXx2RKx7zzqfMoJC+6ddjp49F5zPzM/1mt9
 0yvd875LwX2KrNk0X775Zsmsx3s3efMdvTD79fZHmPWbFfXWPKVp2hk0H2LL
 eZte+ijbm2n8i+/n9EkT2qhS4cVelz5Td67xYPfSPUuOV+Yb/6MfvPNjL6N3
 jDjndZh7Nu3+A+knMtI=
-                  "]]}, "0.267`"], 
-               Annotation[#, 0.267, "Tooltip"]& ], 
+                  "]]}, "0.267`"], Annotation[#, 0.267, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -8032,8 +7985,7 @@ UUajU1y5QRz+BXl9h1fvz+f7u9/3fu0zK2PLdSGEAv2JEPKNIexpVnc1p32a
 Or8xv2uXvZsm+6NWnV02hHCia85O43/aP+M7uuHswrypw/ZRRji2l/SODHly
 PLHAIvUUWKLMn3u2tKQt8V2taMJ3tGmHOwvme+dnes4Qq/Zx1s0TmvK7qrmZ
 D+89xHvNndRIkfSbVv3x/JcvvqnF7yDt2T8y4jqy
-                  "]]}, "0.178`"], 
-               Annotation[#, 0.178, "Tooltip"]& ], 
+                  "]]}, "0.178`"], Annotation[#, 0.178, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -8612,7 +8564,6 @@ S93JE/wJwbOiflfC9y14tjQzV+CmY/NS90i9Gg3+gP8Ra2XtjdF3I81cCH6D
 o9Qr1dhC/srgt0IaOhq9h/b6PwPkXsj8rfrTrbcmWtvS5An8rsyzpT1O4Q/I
 rCWdQWe5lnl2td71zGfUWfWmDcIvLfjt1kyVFKwZaUcz+Sjzmye9qqcdcDOi
 e6M37nDwHemuNPN9tXZmbegfon/J0+BeSGPSWgCPy/vNHUb+P0dsuE4=
-                  
                   "]]}]}, {
                EdgeForm[], 
                RGBColor[0.717571875, 0.1749009375, 0.1764215625], 
@@ -8826,7 +8777,6 @@ aGdq4OvL+1unnqpXybnGbfDdxOhHH0LvzP1PqHbtUInzC3PPUucVq0H7kflO
 Pb6XnN8Ln0buH6Aped9kewVfnrt29VO91w5oF1qxDSbv8Ph80XeUu2i/5veG
 893R/55mfoK7t5PPqmfq3TC6LXNO5R5Ijq0YijWS/Db5G4n1Iflf0MyaomtW
 7XrTUHIP1UvFfI3eltw71bgVfjr6X9cO1JJ/jLPTi96hd/j/AwOZkZQ=
-                  
                   "]], 
                  
                  PolygonBox[{{1373, 1372, 1116, 613, 1493}, {1082, 579, 1449, 
@@ -8938,7 +8888,6 @@ Rlvl/Jvbe8b7C21B7wrvB2zWIr6TvR30H+qnMmKEVodjvN3Cd/XNBXqD8x0B
 ZnCQjOo+vHJ3gn6BdwCfaBs1Z9PMOdqM3g5aGyrqeXKtjMq6l5xNGS7xPyRn
 O0Jf49wvne2Gefto9cL1LXSSUX0Kz3gH0MicuYu2RZ7r3P9M/64JlXah94g+
 xN/M3Dvk/FZ6N/WktQvvph20y0vpWZqhWcv/rJqhWX9unC+n
-                  
                   "]]}]}}, {{}, 
               TagBox[
                TooltipBox[{
@@ -8998,8 +8947,7 @@ W4VBt+Ao0hJegHvPPzy83zl+349b571mdykiGtyvRBSzEbsUOMtEdFcjTu3/
 9E7bdid0zG3zTG/1yC6hlf5uTuwTneiD3a9zizAfp+/YcJ6mbzlw50ZzdjXn
 KgtzWSuU2GePS/u+vuma+6/6pXVt6icfbLsz1BGHvDMgb/+sL1R54pFN+x/f
 mNNjyAXfjNP/vByR1YK7O1xzxbp3/724KAo=
-                  "]]}, "0.525`"], 
-               Annotation[#, 0.525, "Tooltip"]& ], 
+                  "]]}, "0.525`"], Annotation[#, 0.525, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -9012,7 +8960,6 @@ QxmhtvQGNYQRSEtENBS+QJ/Dx3/Ofy7cbOWwcDASERvsjUbUxyJycmaYzNJI
 Rjzp5vjmlhan+mv3vHleLrLEmf5GLuiX5QqrnOt/EhFtc4d1iox796t/lQN5
 6V1af2zPm4/kHydk9PXhf/qSfOfKPK1vmtfMZZmyd+UjFxT1z7oXdinZ75hw
 25Q93RtVyvZ7Mm5bsq/7oMa2/YFJtx35qftin4q9w5RbW/4DGE4s5Q==
-                  
                   "]]}, "0.44999999999999996`"], 
                Annotation[#, 0.44999999999999996`, "Tooltip"]& ], 
               TagBox[
@@ -9042,8 +8989,7 @@ pv7H11zRdlGxN+xfvuKytoOyvW7/8CWXtG2U7Lzd5HN+wD1S9hoXfKeIwdZ7
 +FNbxZI7h0W0+U0JvOsz9iymMY85nOhHfIx+z7mzn3mBl/kJjxjx+ZtWxz5e
 0as32yNe3N/cx1ltCjXcoqH36Bn3JC5a/wVferc+7h7DGU7xoSf1tHsYhzjA
 gPf/A00sLtY=
-                  "]]}, "0.3`"], 
-               Annotation[#, 0.3, "Tooltip"]& ], 
+                  "]]}, "0.3`"], Annotation[#, 0.3, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -9057,8 +9003,7 @@ uB0ZXSs/oQ3buhZuRlpX4Ec0YUvXyHmkdBl+QBYbunQyzyUfjPjAJ65QNSvk
 7eJdXpN7eERedV63W8cXluUL3RKXsYJT+YAPsY9buWj3l/9wjG67Nd0l3uSf
 jLfyvPkcZpzruhfnc76X7/CNSbzixHxa3899mDCbksf5hjf5mks8xqNc4wqf
 8XDyJh5K/onLvMeD3MsDvMtH7v4H094sAQ==
-                  "]]}, 
-                "0.22499999999999998`"], 
+                  "]]}, "0.22499999999999998`"], 
                Annotation[#, 0.22499999999999998`, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
@@ -9073,8 +9018,7 @@ Qjgxn2IcebTIv+R18wVmMIt2+bf8znyPOcyjU/4jf+VfPveuDnnR/o43hOYQ
 RuVjeNK94BnT9iP9h3mRV3iJj+UPnLXn0Igz+7q8npzjNawilfyP+4cwgBEM
 49K5DF9zK1/xn7MbXOBdzxZwk3wfb3Ix+W7zHm7tJY6QTjJdmfPu6tVVzBm0
 oaSr8oSuT1czd6EbZd0+T+r6dQfmHmRR0R3ylC7WPZr/AT3LLVs=
-                  "]]}, 
-                "0.15`"], Annotation[#, 0.15, "Tooltip"]& ], 
+                  "]]}, "0.15`"], Annotation[#, 0.15, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10186,7 +10130,6 @@ s1ZUk2obwwbAh8CXqac991sjDUqL11m7AL6Ibcn9Jult0p1phm9Nrc0pbADc
 H/3tmsdWuEWp9aI7Xw7XmLrX0uQ74APRe9WzFrj61L3+HtsF15Q6lzTdF12D
 apGG3o2euXjV2JhbM9KOengOvyv626TxN6PvsO6P3sxZ/FLqXugNukeuV6Lf
 ZvXkVfy53G+97qDu4rWS747eAL0F/2Se7Qg4AW/KrXX9B22A+x+Q8suU
-                  
                   "]], 
                  
                  PolygonBox[{{1561, 741, 2088, 1898, 1899}, {1899, 1898, 1902,
@@ -10298,7 +10241,6 @@ AptVb/gXeJ83borDVejfArvrEWLeMF++N+5pvg3eOCQu6Q3oLVzBdjlpd9IY
 bfRriuzuVyOtgf0R2rc4UuttZs0uzj+NjEPikjgsLgfUexG3N6i3uM1bL/1x
 +uv05vX29SeURdZDvTSDZhEnxA3VCNF/hnbWS/hdZGfS2fRGSsT/yLipHWlX
 ejPKf41/C3izN6w/Tn+dOCVuaScVkXFEXBFHF5L2JvU2xemX4P/H06OV
-                  
                   "]]}]}, {
                EdgeForm[], 
                RGBColor[
@@ -10347,8 +10289,7 @@ WIVFuL6Da+7vud9v3vcpPDz1Hhci4oq3VEQ+G7FMjhUKdCmxSpF11uhRoUqZ
 Gptcs02TBrvscMM+B+xxSIs+x5xwxCltbkkvRozt9ez7PR3xx695lon44ZuR
 Luu/DB/OLpP3dOfJDvJCTvSdZC/zWbKXvJdf8k5OZdVdFV7ds2UeLkV8yrJu
 gxd93TzQz83/H2gdpA==
-                  "]]}, "0.3`"], 
-               Annotation[#, 0.3, "Tooltip"]& ], 
+                  "]]}, "0.3`"], Annotation[#, 0.3, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10362,8 +10303,7 @@ GutcCW/cGUa4UZS5KtrcOca4cexx+/jkLvCdiriUd/6a5Fv6LzrY6IvI8AMo
 2k2whE1+iBvGir6GVWT1fjcyuLE/oV/Lsvkvf1zhlXvBLV/hEzlo/oPb/b+v
 78hFmecKqJmr4onL6UfeC/LUXpHbNv8o57k5HPMFvc4/yFluBk0+r2/x93Ka
 m0KDz+k1/l3/A+Z6LGQ=
-                  "]]}, "0.27`"], 
-               Annotation[#, 0.27, "Tooltip"]& ], 
+                  "]]}, "0.27`"], Annotation[#, 0.27, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10377,8 +10317,7 @@ GrHKI/a5Pspr9pu+zmN2VR/nDftd3+SsfanneMv+0Es8YW/zJO9wXa8lIvb9
 rqCMQxzgQe9yR74tYg6zePbcPF/rV1jyv0Xc+e8njrUjTGtTuNHqqGjlxnc1
 vhFP3vuIPW0XJfS5e9DdA85rzr7tL/Q76+Ef3OtFewXLyGhJ7YITXOVuz3fy
 jPMOzthnnOZ2zuppTtkn/GcnGu/mZv7lW3f9A4NfM4g=
-                  "]]}, "0.24`"],
-                Annotation[#, 0.24, "Tooltip"]& ], 
+                  "]]}, "0.24`"], Annotation[#, 0.24, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10393,8 +10332,7 @@ yPXaQ34Ij1yfeU2/jmOu3x7hnrgBcwwbXCw7hBM+bk/yq1jBhX5YpuUgF5cN
 shH1zl/JDG58b8e+hVHfG8GpLs29uPOMaq5OluuOZJk8lL3OVsskXyWj9iKu
 EC3mVixyzbIJBfoP5z6xg3fU8LV4Nae8e41x+xgq3anAri6DhG4IJbpibOsu
 Efv/P8jX5WFTd47W/7fxjjdEvP8HpGRBfA==
-                  "]]}, "0.21`"], 
-               Annotation[#, 0.21, "Tooltip"]& ], 
+                  "]]}, "0.21`"], Annotation[#, 0.21, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10409,8 +10347,7 @@ og/jHn/RD3CEJ/RRPOSv+psVacV2o9fjnXaRHMK7DWV4x9q1TuuwNvfy3bvC
 ce804hpvwDF+jtm8FmvcP8M6fu186s2I8zHe2azzjFW50+y/l+58On9YhV72
 /5a2iY1+38AfK7Hy/+/GL1u1ar8X4ISeh5V8CYsxF6N6DhbyeczCbGzVI5jJ
 4/jL07AJU/AbE77hD78ZPgw=
-                  "]]}, "0.18`"], 
-               Annotation[#, 0.18, "Tooltip"]& ], 
+                  "]]}, "0.18`"], Annotation[#, 0.18, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10426,8 +10363,7 @@ LjlF96Drtkf5ZRzreuRU3aOu1/6bj+FE1ydHdE+6fvsffgVnugE5TfesG7Sv
 rzFPzRwuGzvu/sMLVy6X4ZO9OP5/zGp5xfzqWeXmpPzF3oD8+LuUS7Cku0cU
 b/iPmN/9i3H9GKrcqcQvbtfdH9woRlDgfKlum++Ru+PfA7n8R36Lb5ab0Igs
 PpPf4D/L9ahDhH81p8x3IpRHNw==
-                  "]]}, "0.15`"], 
-               Annotation[#, 0.15, "Tooltip"]& ], 
+                  "]]}, "0.15`"], Annotation[#, 0.15, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10460,8 +10396,7 @@ i/gdrOHdQ/wNf003bA/0Pt7Pn9omqe79E/6YLmPH9B5+ibrlpvtZ3kmz7m/T
 M3mSzmEnvXvFz+sz/Lo7XfyR3itfo+PeJPVcfJ/OyNPeHOIJemd7G//vcoHy
 FOFn/XbOPhp/s/ib0gn7KXvDflqf0lNyjt/SszzCX/BOfpT32jM8oz/nSZ7m
 V+wd/IDX3fgPsQdWFg==
-                  "]]}, "0.09`"], 
-               Annotation[#, 0.09, "Tooltip"]& ], 
+                  "]]}, "0.09`"], Annotation[#, 0.09, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10477,8 +10412,7 @@ Le70+P2b486a0YQ39pLzZaTwR0u6166n7VX8wqGe1t9WhPDe2aa2hW3knR07
 G9IzhbvI4la/wV+9z7tJ/shH3M85XnA+j0v3J+xr38nynDaLCz1hX+mH/EP7
 jrw+bv/XMzyjTeNcH7Mv9QP+pn3FmT5qX+j7nNSmcKqP2Hl9jye1CZzow/a5
 vssJbbzwP/Uv9pm+w2PaKI70z/ap/o9HtGHk9E/2iX5nPwLBtVq0
-                  "]]}, 
-                "0.06`"], Annotation[#, 0.06, "Tooltip"]& ], 
+                  "]]}, "0.06`"], Annotation[#, 0.06, "Tooltip"]& ], 
               TagBox[
                TooltipBox[{
                  Directive[
@@ -10496,8 +10430,8 @@ jO9m8Vf+hC/XpXVPzXPyf5jWdfI7dBndM/O8/D9mdM/5nbqs7oU5Ll+I9uq6
 0UAH3FNPH/JfonP0Iu2W19Jmfoie9d0J2UlM8e32DbqnlP9Ex5B1JoNT+np9
 L63iY7TWnqO0Rn4B5fIyXDMftuMIJvV3+D67cuYY/YG0cymc151Dj+w7lmVL
 OCM7jS7ZKBZlSRyXHUOn7CsSsgUckh3EFawDCRdzOA==
-                  "]]}, "0.03`"],
-                Annotation[#, 0.03, "Tooltip"]& ], {}, {}}}], {}}, {
+                  "]]}, "0.03`"], 
+               Annotation[#, 0.03, "Tooltip"]& ], {}, {}}}], {}}, {
           DisplayFunction -> Identity, 
            ImagePadding -> {{43.99999999999997, 5.}, {39., 
             18.00000000000003}}, DisplayFunction -> Identity, DisplayFunction -> 
@@ -10605,140 +10539,138 @@ OCM7jS7ZKBZlSRyXHUOn7CsSsgUckh3EFawDCRdzOA==
         7.5, -112.5}}]],
       Antialiasing->False]}, 
     {CapForm[None]}, 
-    StyleBox[
-     StyleBox[{
-       {GrayLevel[0], AbsoluteThickness[0.2], Opacity[0.3], 
-        LineBox[{{7.5, -112.5}, {7.5, 112.5}}]}, 
-       {GrayLevel[0.4], AbsoluteThickness[0.2], 
-        StyleBox[{
-          {GrayLevel[0.4], AbsoluteThickness[0.2], 
-           LineBox[{{{7.5, -92.04545454545455}, 
-              Offset[{4., 0}, {7.5, -92.04545454545455}]}, {{
-              7.5, -71.5909090909091}, 
-              Offset[{4., 0}, {7.5, -71.5909090909091}]}, {{
-              7.5, -51.13636363636364}, 
-              Offset[{4., 0}, {7.5, -51.13636363636364}]}, {{
-              7.5, -30.681818181818173`}, 
-              Offset[{4., 0}, {7.5, -30.681818181818173`}]}, {{
-              7.5, -10.227272727272734`}, 
-              Offset[{4., 0}, {7.5, -10.227272727272734`}]}, {{7.5, 
-              10.22727272727272}, 
-              Offset[{4., 0}, {7.5, 10.22727272727272}]}, {{7.5, 
-              30.681818181818187`}, 
-              Offset[{4., 0}, {7.5, 30.681818181818187`}]}, {{7.5, 
-              51.136363636363654`}, 
-              Offset[{4., 0}, {7.5, 51.136363636363654`}]}, {{7.5, 
-              71.5909090909091}, Offset[{4., 0}, {7.5, 71.5909090909091}]}, {{
-              7.5, 92.04545454545453}, 
-              Offset[{4., 0}, {7.5, 92.04545454545453}]}}]}, 
-          {GrayLevel[0.3], Opacity[1], 
-           StyleBox[{
-             {GrayLevel[0.3], AbsoluteThickness[0.2], Opacity[1], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.09\"\>",
-                  ShowStringCharacters->False],
-                 0.09,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, -92.04545454545455}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.18\"\>",
-                  ShowStringCharacters->False],
-                 0.18,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, -71.5909090909091}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.27\"\>",
-                  ShowStringCharacters->False],
-                 0.27,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, -51.13636363636364}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.36\"\>",
-                  ShowStringCharacters->False],
-                 0.36,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, -30.681818181818173}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.45\"\>",
-                  ShowStringCharacters->False],
-                 0.44999999999999996`,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, -10.227272727272734}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.54\"\>",
-                  ShowStringCharacters->False],
-                 0.54,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, 10.22727272727272}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.63\"\>",
-                  ShowStringCharacters->False],
-                 0.63,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, 30.681818181818187}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.72\"\>",
-                  ShowStringCharacters->False],
-                 0.72,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, 51.136363636363654}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.81\"\>",
-                  ShowStringCharacters->False],
-                 0.81,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, 71.5909090909091}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
-               TagBox[
-                InterpretationBox[
-                 StyleBox["\<\"0.90\"\>",
-                  ShowStringCharacters->False],
-                 0.8999999999999999,
-                 AutoDelete->True],
-                NumberForm[#, {
-                  DirectedInfinity[1], 2}]& ], 
-               Offset[{7., 0.}, {7.5, 92.04545454545453}], 
-               ImageScaled[{0, 0.5}], Automatic, {1, 0}]}, {}}, 
-            "GraphicsLabel",
-            StripOnInput->False]}}, "GraphicsTicks",
-         StripOnInput->False]}},
-      Antialiasing->False], "GraphicsAxes",
-     StripOnInput->False]},
+    StyleBox[{
+      {GrayLevel[0], AbsoluteThickness[0.2], Opacity[0.3], 
+       LineBox[{{7.5, -112.5}, {7.5, 112.5}}]}, 
+      {GrayLevel[0.4], AbsoluteThickness[0.2], 
+       StyleBox[{
+         {GrayLevel[0.4], AbsoluteThickness[0.2], 
+          LineBox[{{{7.5, -92.04545454545455}, 
+             Offset[{4., 0}, {7.5, -92.04545454545455}]}, {{
+             7.5, -71.5909090909091}, 
+             Offset[{4., 0}, {7.5, -71.5909090909091}]}, {{
+             7.5, -51.13636363636364}, 
+             Offset[{4., 0}, {7.5, -51.13636363636364}]}, {{
+             7.5, -30.681818181818173`}, 
+             Offset[{4., 0}, {7.5, -30.681818181818173`}]}, {{
+             7.5, -10.227272727272734`}, 
+             Offset[{4., 0}, {7.5, -10.227272727272734`}]}, {{7.5, 
+             10.22727272727272}, 
+             Offset[{4., 0}, {7.5, 10.22727272727272}]}, {{7.5, 
+             30.681818181818187`}, 
+             Offset[{4., 0}, {7.5, 30.681818181818187`}]}, {{7.5, 
+             51.136363636363654`}, 
+             Offset[{4., 0}, {7.5, 51.136363636363654`}]}, {{7.5, 
+             71.5909090909091}, Offset[{4., 0}, {7.5, 71.5909090909091}]}, {{
+             7.5, 92.04545454545453}, 
+             Offset[{4., 0}, {7.5, 92.04545454545453}]}}]}, 
+         {GrayLevel[0.3], Opacity[1], 
+          StyleBox[{
+            {GrayLevel[0.3], AbsoluteThickness[0.2], Opacity[1], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.09\"\>",
+                 ShowStringCharacters->False],
+                0.09,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, -92.04545454545455}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.18\"\>",
+                 ShowStringCharacters->False],
+                0.18,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, -71.5909090909091}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.27\"\>",
+                 ShowStringCharacters->False],
+                0.27,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, -51.13636363636364}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.36\"\>",
+                 ShowStringCharacters->False],
+                0.36,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, -30.681818181818173}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.45\"\>",
+                 ShowStringCharacters->False],
+                0.44999999999999996`,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, -10.227272727272734}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.54\"\>",
+                 ShowStringCharacters->False],
+                0.54,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, 10.22727272727272}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.63\"\>",
+                 ShowStringCharacters->False],
+                0.63,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, 30.681818181818187}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.72\"\>",
+                 ShowStringCharacters->False],
+                0.72,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, 51.136363636363654}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.81\"\>",
+                 ShowStringCharacters->False],
+                0.81,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, 71.5909090909091}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}], InsetBox[
+              TagBox[
+               InterpretationBox[
+                StyleBox["\<\"0.90\"\>",
+                 ShowStringCharacters->False],
+                0.8999999999999999,
+                AutoDelete->True],
+               NumberForm[#, {
+                 DirectedInfinity[1], 2}]& ], 
+              Offset[{7., 0.}, {7.5, 92.04545454545453}], 
+              ImageScaled[{0, 0.5}], Automatic, {1, 0}]}, {}}, "GraphicsLabel",
+           StripOnInput->False]}}, "GraphicsTicks",
+        StripOnInput->False]}}, "GraphicsAxes",
+     StripOnInput->False,
+     Antialiasing->False]},
    BaseStyle->{},
    Frame->True,
    FrameStyle->Opacity[0],
@@ -10755,17 +10687,18 @@ Cell["\<\
 In order to qualitatively link the probabilities calculate above to a \
 modulation of target transcription, we compute the context-dependent \
 \[OpenCurlyDoubleQuote]modulator factor\[CloseCurlyDoubleQuote] introduced in \
-Eq.(23). First, this is calculated at zero EcR fragment concentration \
+Eq.(S23). First, this is calculated at zero EcR fragment concentration \
 (varying the total 20E and EcR levels) and consequently at fixed EcR \
 concentration EcR_tot=5 nM (varying the total 20E and EcR fragment levels). \
 Note that EcR complexes are assumed to only affect transcription when they \
 are bound to DNA in proximity of the ERE, thus the probability of a EcR being \
 in a given complex needs to be multiplied by the probability of an ERE of \
-interest being occupied by EcR, Eq.(20).\
+interest being occupied by EcR, Eq.(S22).\
 \>", "Text",
  CellChangeTimes->{{3.8798491596370296`*^9, 3.879849421675476*^9}, {
   3.879849600318522*^9, 3.879849603350288*^9}, {3.884837170761641*^9, 
-  3.884837194952928*^9}},ExpressionUUID->"7f8eee0f-7ada-4964-9129-\
+  3.884837194952928*^9}, {3.897380664625924*^9, 
+  3.897380694187728*^9}},ExpressionUUID->"7f8eee0f-7ada-4964-9129-\
 11fd52cb787e"],
 
 Cell[CellGroupData[{
@@ -10911,7 +10844,6 @@ G3nvTskA0k1eH8G0O1NWDohuf7smD0SXqD7sANFTnJ6C6aagqKkg2uSF5AIQ
 fe+r0DoQzWJVDKZ71s6aXQCkXykeBdNaTz6IWLx44/gphkEcRE9/atJkCaTb
 rELAtIxYzl4QnbZE7QCIZoq8yJcCpNPdb4iAaKcM9VTLl28cs7w0wfTz5cL/
 b7x947jl9DGGm0C6LGGl6t6PQPNY9oBpAPAQpn0=
-  
   "],ExpressionUUID->"ec827db1-55ee-4608-9326-3523748bd978"],
 
 Cell[BoxData[
@@ -11603,7 +11535,6 @@ une1g5cXvXO0e/SGjcQeHd0b2nlvIh8S7Us7Vrt2C2io8M7vIL/ezLOvmevL
 fEfdVW84O/FO0m56TzsQXxNT/1u0c+oS10i10s5sQ9YK3ziwL9RrnZlnRztZ
 u3ls5n+N3vxV6NGpd6FyGpl6R2lXycdm+A+Kjq1/nv59/wOH0+cf
                 "]]}]}, {
-            
              EdgeForm[], 
              RGBColor[
              0.7829815223184335, 0.21300986984491338`, 0.21551933751441257`], 
@@ -11786,7 +11717,6 @@ vt2tWHuJ+KvA56PnwZuBr8Sehz1Xbyb7+0Vzk95svd19ov91xHHiusei3179
 k+jfpMD+d0s803vB6op8op5rGxxTsZVTuX/Enp3zP8AK8WN0r2jtAPqj0bOm
 fyr9W+kfQf8KOuNhnS/4W3WHA/SeaOYzrkE39BeD3wrVWFzYN/jbdQe6i62s
 vZEzJ4mbxGHiMnHQCnItD+5V+cj3SHStNGM1YL9Fv/XKqdz/A8pVWl0=
-                
                 "]]}]}, {
              EdgeForm[], 
              RGBColor[
@@ -12120,7 +12050,6 @@ stRF6lv6nmg+80RCtAd4E+0H7uO3xDQf/xstgN+g7eElcMG+F1CGV1O2+xE8
 wwvOdulM3jNNvRlYwKf4X3if4I/5PNop3hxc0X9E2+FN2BElDcpHPPv4FfxL
 3r0F5/AQfSy280Ddo6eHVsJ/dTajs5r5nfojabdoj/b+Zuxb6M0R/J482bjt
 XMI3abtV3zlzllmza8Y76rpn2XXGp7/m2a16UyFlGTSL/pM29T9D5TrS
-                
                 "]]}]}}, {{}, 
             TagBox[
              TooltipBox[{
@@ -12166,8 +12095,7 @@ b2wZeYon8aK/5QnM6bd5livcrUQ56mMhxJHQP7u/491d/Lr7hzb9h3429way
 cpPvWtCMpK6VD31zhHJsutOu60DKnsa3N9b4h4/1J+7t5X4L73Ofrh+9+JJP
 9Qcc5wHdIzrlQT7TnSOBIfkJXbZhvtBdogEj8rr/1m0bdb7SXaMRY/KGrceW
 cf4HjTg10g==
-                "]]}, "0.475`"], 
-             Annotation[#, 0.475, "Tooltip"]& ], 
+                "]]}, "0.475`"], Annotation[#, 0.475, "Tooltip"]& ], 
             TagBox[
              TooltipBox[{
                Directive[
@@ -12182,8 +12110,7 @@ EE5iIdxz1DylG0WrfKy/44g+qRvBMI70LfpDvuUL3Q0fyE28z9d8pj/Hsvd5
 f/CBfoWrOc/7/M47vMgl9xa4KL9xvfeNaMCAWS3X4cH5Ed92ZjiiiyLg1bsy
 7tX34UVO8xBvcz9i5ln/GedyFDBuZ9KdD/NhnpA39JM8In/pR3lK3tTPcEr+
 1qd5Vt7Sz/GY/KPPcM6erK5o9g8iyTsA
-                "]]}, "0.38`"], 
-             Annotation[#, 0.38, "Tooltip"]& ], 
+                "]]}, "0.38`"], Annotation[#, 0.38, "Tooltip"]& ], 
             TagBox[
              TooltipBox[{
                Directive[
@@ -12217,8 +12144,7 @@ OcW3+BFv8AjnuBz34/vq9bg/9/FBfAv+H9+PJ9X37H2Bz6Oi/15/3HoCb3AN
 f/Rn9X/zHO9xo34T3ql/qWd4lzPcxlfRji9V7m2uE1Oy1zzkzGEcU2+ZuYhL
 8Q7xfnzTO9XIStbNuIxN2U68r+y47Jt1C67EM2Tf45vITsh+WKfjv+Cr7Cff
 kdXK5px7CMoCWng=
-                "]]}, "0.19`"], 
-             Annotation[#, 0.19, "Tooltip"]& ], 
+                "]]}, "0.19`"], Annotation[#, 0.19, "Tooltip"]& ], 
             TagBox[
              TooltipBox[{
                Directive[
@@ -12236,8 +12162,7 @@ Jv8Z7aJHdhNf5HnyAu8uxL5sXt1q5jJyZW/VOZyPPHyWf8JF+SXz97xr3T0Z
 6jc4YiYLR9Gk3tb/ih1smGu2e1gvHWmYNhOTpfPH6P/gKo5F34V803kLM+oM
 87OcyTVcLa+N9vmO+2u5Tl3D9VzHd+UN3KCu50Zu5A55tXtiWI2+L1RGu+oq
 PmmmHGdwGmfxHzbYWis=
-                "]]}, "0.095`"], 
-             Annotation[#, 0.095, "Tooltip"]& ], 
+                "]]}, "0.095`"], Annotation[#, 0.095, "Tooltip"]& ], 
             TagBox[
              TooltipBox[{
                Directive[
@@ -12720,6 +12645,7 @@ WXvSfmle4bpyLrvgBJ9zlls8y3Az590bR78bZ57fc1P5/2QFZMw5LOlneVKW
                     RowBox[{"0.475`", ",", 
                     RowBox[{"Directive", "[", 
                     RowBox[{
+                    
                     TemplateBox[<|"color" -> GrayLevel[0]|>, 
                     "GrayLevelColorSwatchTemplate"], ",", 
                     RowBox[{"Opacity", "[", "0.5`", "]"}], ",", 
@@ -13457,7 +13383,6 @@ UfUjqU+anutNY6Q1peRcRv6cYFr5X1/1foJxnlyFwTRD2iHNbYh9wNvblcZN
 DlaTapMmRthVsc2e+iEtnkXM9iyb2dnBNFb91dp97JykH9Lwx3zzGlifMo14
 5u0N6S1J47K5z1TGtEL/WdXeavTJnhXBZk6zJ804T+5/LKjWIg==
                 "]]}]}, {
-            
              EdgeForm[], 
              RGBColor[
              0.8491588856066766, 0.3038649293072304, 0.3084273007458573], 
@@ -13768,8 +13693,7 @@ B+6F9jeaEdH/AHYeJpQ=
 Frjhmj5Vbslzzx0DHqizwnQi4lE3tEaSFimmJiOK+sc/dbIj9iVN6wwZns09
 7bNKgTW27Jd1Xxd1T5f0RV85oEOXpm9s6JO+e6cP3vjikxP3jmk7z3puR+f0
 W8v2Pzpv3h39C/3VU/shZfEtyQ==
-                "]]}, "0.255`"], 
-             Annotation[#, 0.255, "Tooltip"]& ], 
+                "]]}, "0.255`"], Annotation[#, 0.255, "Tooltip"]& ], 
             TagBox[
              TooltipBox[{
                Directive[
@@ -13782,8 +13706,7 @@ nZjohqUjg6D1m1g6deDqcOV+3uf7vrdpZrVS3ExExAL1ZMR3T8QPH3zxya19
 S995pckbN/bPqYi0uZ8+Dp2vuWKqN2KaSfJseD5iP2He1qRzxbzFo/MTB/yx
 T8m+oTld06yu65iuaEH3tM0uD+4b1kW95460d2rd39IUv+Z5zjjlvPvfmPPu
 LJdccGL3Qt48zjFHLLtjiZw5yygJ9+xo2X5IBxmg4/uqznj+D78yL9w=
-                "]]},
-               "0.17`"], Annotation[#, 0.17, "Tooltip"]& ], 
+                "]]}, "0.17`"], Annotation[#, 0.17, "Tooltip"]& ], 
             TagBox[
              TooltipBox[{
                Directive[
@@ -13797,8 +13720,7 @@ PmKHwU7muMtRHrPAEjOesMwzNnKYTTznGE/Volu1KvPOomrmed7Y126e4rRm
 tGD90rdcWF8yL+o77de97lSxtsc/7Ws87eODqubwnDVzr3mFEzxgPn1/+nY9
 ur7yng33+tK/UHPROXa5t2xPv3lAQxrUk/V6ew6Z4xFf9Kxrz3pz5l2v6rZW
 45Zzn+xx/cESv7ht/R/WjTBs
-                "]]}, "0.085`"], 
-             Annotation[#, 0.085, "Tooltip"]& ], 
+                "]]}, "0.085`"], Annotation[#, 0.085, "Tooltip"]& ], 
             TagBox[
              TooltipBox[{
                Directive[
@@ -14398,10 +14320,11 @@ O2yTd3tl1B4hR5Z/+od5M78=
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{839, 917},
-WindowMargins->{{41, Automatic}, {Automatic, 37}},
-FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1227.75, 1419.},
+WindowMargins->{{711.75, Automatic}, {12, Automatic}},
+FrontEndVersion->"13.1 for Linux x86 (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b17194e3-b3cf-4ed8-9267-97b48379d383"
 ]
 (* End of Notebook Content *)
 
@@ -14416,22 +14339,22 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[1486, 35, 230, 4, 68, "Section",ExpressionUUID->"6b6f5f2c-c472-421e-b66b-27cd046d596e"],
-Cell[1719, 41, 875, 15, 84, "Text",ExpressionUUID->"a33c564c-7592-4ce9-ac34-e841e72551eb"],
-Cell[2597, 58, 13173, 328, 929, "Input",ExpressionUUID->"6d98fc25-707c-4b83-91dc-2be92d3b0c27"],
-Cell[15773, 388, 459, 8, 60, "Text",ExpressionUUID->"b0762601-6157-42c3-9d67-d548aac0e0a4"],
+Cell[1719, 41, 906, 16, 127, "Text",ExpressionUUID->"a33c564c-7592-4ce9-ac34-e841e72551eb"],
+Cell[2628, 59, 12788, 324, 902, "Input",ExpressionUUID->"6d98fc25-707c-4b83-91dc-2be92d3b0c27"],
+Cell[15419, 385, 459, 8, 58, "Text",ExpressionUUID->"b0762601-6157-42c3-9d67-d548aac0e0a4"],
 Cell[CellGroupData[{
-Cell[16257, 400, 7205, 170, 285, "Input",ExpressionUUID->"1be3a53b-2cf8-4cf7-a1f6-1b22790bf851"],
-Cell[23465, 572, 1229, 18, 53, "Output",ExpressionUUID->"c24256bf-920d-443a-b171-daa69c8ed709"],
-Cell[24697, 592, 1229, 18, 53, "Output",ExpressionUUID->"8e215999-873b-4bd0-ac60-40ec3ecd5736"],
-Cell[25929, 612, 283405, 5071, 619, "Output",ExpressionUUID->"c7240780-4781-492c-92bf-a302e8a97f18"]
+Cell[15903, 397, 7205, 170, 344, "Input",ExpressionUUID->"1be3a53b-2cf8-4cf7-a1f6-1b22790bf851"],
+Cell[23111, 569, 1229, 18, 48, "Output",ExpressionUUID->"c24256bf-920d-443a-b171-daa69c8ed709"],
+Cell[24343, 589, 1229, 18, 48, "Output",ExpressionUUID->"8e215999-873b-4bd0-ac60-40ec3ecd5736"],
+Cell[25575, 609, 282963, 5043, 619, "Output",ExpressionUUID->"c7240780-4781-492c-92bf-a302e8a97f18"]
 }, Open  ]],
-Cell[309349, 5686, 281954, 5065, 615, "Input",ExpressionUUID->"5af48cc5-0352-4ae4-84e4-003a9a8bd64c"],
-Cell[591306, 10753, 964, 15, 108, "Text",ExpressionUUID->"7f8eee0f-7ada-4964-9129-11fd52cb787e"],
+Cell[308553, 5655, 281198, 5028, 615, "Input",ExpressionUUID->"5af48cc5-0352-4ae4-84e4-003a9a8bd64c"],
+Cell[589754, 10685, 1015, 16, 104, "Text",ExpressionUUID->"7f8eee0f-7ada-4964-9129-11fd52cb787e"],
 Cell[CellGroupData[{
-Cell[592295, 10772, 5591, 142, 354, "Input",ExpressionUUID->"ec827db1-55ee-4608-9326-3523748bd978"],
-Cell[597889, 10916, 600, 10, 53, "Output",ExpressionUUID->"5e9307c9-82df-45d3-8d8e-5112d5bfc023"],
-Cell[598492, 10928, 602, 10, 53, "Output",ExpressionUUID->"27b303c8-ced6-42ee-b88f-7ff428d09fa5"],
-Cell[599097, 10940, 184762, 3456, 174, "Output",ExpressionUUID->"92982307-7400-4003-8f2f-b68a4e7f2066"]
+Cell[590794, 10705, 5588, 141, 333, "Input",ExpressionUUID->"ec827db1-55ee-4608-9326-3523748bd978"],
+Cell[596385, 10848, 600, 10, 48, "Output",ExpressionUUID->"5e9307c9-82df-45d3-8d8e-5112d5bfc023"],
+Cell[596988, 10860, 602, 10, 48, "Output",ExpressionUUID->"27b303c8-ced6-42ee-b88f-7ff428d09fa5"],
+Cell[597593, 10872, 184624, 3446, 173, "Output",ExpressionUUID->"92982307-7400-4003-8f2f-b68a4e7f2066"]
 }, Open  ]]
 }, Open  ]]
 }
