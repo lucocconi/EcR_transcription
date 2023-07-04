@@ -173,7 +173,7 @@ def prob_act_mods(E,model,N):
     #a function of 20E concentration, for a given number of EREs in the set 
     #and for a specific choice of the cooperative interaction rule (model)
     
-    kR = 2
+    kR = 0.4
     kE =1/60.
     P0_base   =  1   /(1. + kR + kE*E)
     Pact_base =  kE*E/(1. + kR + kE*E)
