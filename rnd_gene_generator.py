@@ -13,9 +13,9 @@ import numpy.random as rnd
 import numba as nb
 import pandas as pd
 
-rnaseq_data = pd.read_csv("../random_genes_RNAseq/genes_monotonic.csv")
-rnaseq_data_unfiltered = pd.read_csv("../random_genes_RNAseq/genes_changing_norm.csv")
-rnaseq_data_mx = pd.read_csv("../random_genes_RNAseq/all_RNA_seq_genes.csv")
+rnaseq_data = pd.read_csv("./genes_monotonic.csv")
+rnaseq_data_unfiltered = pd.read_csv("./genes_changing_norm.csv")
+rnaseq_data_mx = pd.read_csv("./all_RNA_seq_genes.csv")
 
 # =============================================================================
 # # Generate synthetic datasets from filtered data (monotonic genes)
